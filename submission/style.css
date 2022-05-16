@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+body{
+    font-family: 'Roboto Flex', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form__wrapper{
+    margin: 2rem 0rem 0rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    /* width: 50%; */
+}
+.form__wrapper input[type=text]{
+    outline: none;
+    height: 1.3rem;
+    padding: 0px 4px;
+}
+.form__wrapper input[type=email]{
+    outline: none;
+    height: 1.3rem;
+    padding: 0px 4px;
+}
+.name{
+    display: flex;
+    gap: 1rem;
+}
+.name input{
+    height: 1.3rem;
+    outline: none;
+}
+.button button{
+    width: 5rem;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+.result__wrapper{
+    padding: 3rem;
+    height: auto;
+    width: 80%;
+    background-color: rgb(139, 130, 130);
+    margin: 3rem 0rem 0rem 4rem;
+    /* padding: 1rem 2rem; */
+}
+.result__wrapper h3{
+    padding-top: 1rem;
+    color: rgb(255, 251, 251);
+    font-size: 1.3rem;
+}
+.result__wrapper span{
+    color: black;
+}
+p{
+    font-size: 1.2rem;
+}
+.input-group input{
+    width: 5rem;
+}
+.courses{
+    margin: 15px 0px;
+    display: flex;
+    gap: 1rem;
+}
+.courses span{
+    border: 1px solid rgb(24, 24, 31);
+    padding: 4px 6px;
+}
