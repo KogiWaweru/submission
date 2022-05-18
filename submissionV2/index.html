@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Logo</h1>
+        <h1>User Form</h1>
+    </div>
+
+    <div class="form__wrapper">
+        <div class="name">
+                First Name: 
+            <input type="text" id="fname" name="first-name">
+            Last Name:
+            <input type="text" id="lname" name="last-name">
+        </div>
+        <div class="address">
+            Email:
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="job">
+            Job Title
+            <input type="text" id="job" name="job">
+        </div>
+        <p>Please select the topics you are interested in (Max 5).</p>
+        <div class="check-boxes">
+            <div class="b1">
+            <input type="checkbox" id="saas" name="saas" value="#SAAS"> #SAAS
+            <input type="checkbox" id="b2b"   name="#B2B" value="#B2B"> #B2B
+            <input type="checkbox" id="crypto"   name="Crypto" value="#Crypto"> #Crypto
+            <input type="checkbox" id="health"  name="Health" value=" #Health"> #Health
+            </div>
+            <div class="b2">
+            <input type="checkbox" id="fitness"  name="Fitness" value=" #Fitness"> #Fitness
+            <input type="checkbox" id="education"  name="#education" value="#Education"> #Education
+            <input type="checkbox" id="ecommerce"   name="#ecommerce" value="#Ecommerce"> #Ecommerce
+            </div>
+        </div>
+     
+        <div class="button">
+            <button type="button" id="btnInsert" onclick="update()">Done</button>
+        </div>
+
+    </div>
+
+        <div class="result__wrapper">
+            <div class="h3">
+             <h3><span id="result-name"></span></h3>
+             <p id="rate">Rate: $20/hr</p>
+            </div>
+            <h3>
+            <span id="result-job"></span>
+            </h3>
+            <h3>
+             <span id="result-email"></span>
+            </h3>
+    
+           <div class="courses">
+               <span id="choice-1"></span>
+               <span id="choice-2"></span>
+           </div>
+
+        </div>
+
+        <script type="text/javascript">
+            function update(){
+              const rate =  document.getElementById('rate');
+              rate.style.display= 'block';
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const job = document.getElementById('job').value;
+
+            const elements = [];
+            const saas = document.getElementById('saas');
+            if (saas.checked) {
+               elements.push(saas.value); 
+            }
+            const b2b = document.getElementById('b2b');
+            if (b2b.checked) {
+               elements.push(b2b.value); 
+            }
+            const crypto = document.getElementById('crypto');
+            if (crypto.checked) {
+               elements.push(crypto.value); 
+            }
+            const health = document.getElementById('health');
+            if (health.checked) {
+               elements.push(health.value); 
+            }
+            const education = document.getElementById('education');
+            if (education.checked) {
+               elements.push(education.value); 
+            }
+            const ecommerce = document.getElementById('ecommerce');
+            if (ecommerce.checked) {
+               elements.push(ecommerce.value); 
+            }
+            const fitness = document.getElementById('fitness');
+            if (fitness.checked) {
+               elements.push(fitness.value); 
+            }
+
+            if (elements.length >0) {
+                document.getElementById('choice-1').innerHTML = elements;
+            }
+
+            document.getElementById('result-name').innerHTML = fname;
+            document.getElementById('result-job').innerHTML = job;
+            }
+        </script>
+        
+   
+
+
+
+    
+    <!-- <script src="result.js"></script> -->
+</body>
+</html>
